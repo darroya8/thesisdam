@@ -98,13 +98,13 @@
     ################################################################################
     Application: &ApplicationDefaults
     
-        # Organizations is the list of orgs which are defined as participants on
-        # the application side of the network
+        
+        
         Organizations:
     
-        # Policies defines the set of policies at this level of the config tree
-        # For Application policies, their canonical path is
-        #   /Channel/Application/<PolicyName>
+        
+        
+        
         Policies:
             Readers:
                 Type: ImplicitMeta
@@ -164,8 +164,8 @@
             Admins:
                 Type: ImplicitMeta
                 Rule: "MAJORITY Admins"
-            # BlockValidation specifies what signatures must be included in the block
-            # from the orderer for the peer to validate it.
+            
+            
             BlockValidation:
                 Type: ImplicitMeta
                 Rule: "ANY Writers"
@@ -179,26 +179,26 @@
     #
     ################################################################################
     Channel: &ChannelDefaults
-        # Policies defines the set of policies at this level of the config tree
-        # For Channel policies, their canonical path is
-        #   /Channel/<PolicyName>
+        
+        
+        
         Policies:
-            # Who may invoke the 'Deliver' API
+            
             Readers:
                 Type: ImplicitMeta
                 Rule: "ANY Readers"
-            # Who may invoke the 'Broadcast' API
+            
             Writers:
                 Type: ImplicitMeta
                 Rule: "ANY Writers"
-            # By default, who may modify elements at this config level
+            
             Admins:
                 Type: ImplicitMeta
                 Rule: "MAJORITY Admins"
     
-        # Capabilities describes the channel level capabilities, see the
-        # dedicated Capabilities section elsewhere in this file for a full
-        # description
+        
+        
+        
         Capabilities:
             <<: *ChannelCapabilities
     
