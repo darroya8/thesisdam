@@ -7,12 +7,12 @@ import (
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
-// SmartContract provides functions for control the food
+
 type SmartContract struct {
 	contractapi.Contract
 }
 
-//Food describes basic details of what makes up a food
+
 type Shipping struct {
 	Adate string `json:"adate"`
 	Bbuyer  string `json:"bbuyer"`
@@ -38,9 +38,9 @@ type Shipping struct {
 
 func (s *SmartContract) Set(ctx contractapi.TransactionContextInterface, shippingId string, adate string, bbuyer string, cseller string, dterms string, ematerial string, fhscode string, gquantity string, hunitprice string, ipricetotal string, jpaymentterms string, kinvoice string, lbl string, mstatus string, nexitfactorydate string, oetd string, prtd string, qeta string, rrta string, scustomsdate string, tarrivaldate string) error {
 
-	//Validaciones de sintaxis
+	
 
-	//validaciones de negocio
+	
 
 	shipping := Shipping{
 		Adate: adate,
